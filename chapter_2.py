@@ -44,3 +44,14 @@ print(bicycles.pop(2)) # Pop usually removes the last item in the list, however,
 too_expensive = bicycles.remove('trek')
 print(f"\n I dont have {too_expensive} as it is very expensive for me")
 
+my_foods = ['a', 'b', 'c']
+my_friends_food = my_foods
+print(my_foods)
+print(my_friends_food)
+
+tup = (3,) #defining a tuple with one element, alwasy use comma.
+
+age_0 = 22
+age_1 = 18
+
+print(age_0 >= age_1 and age_1 > 8)
