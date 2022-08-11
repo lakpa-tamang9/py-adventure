@@ -17,8 +17,12 @@
 # def my_func():
 #     print("Lakpa")
 
+## Example 2
 
 # my_func()
+from ast import arg
+
+
 def star(func):
     def inner(*args, **kwargs):
         print("*" * 30)
@@ -44,4 +48,43 @@ def printer(msg):
     print(msg)
 
 
-printer("Hello")
+# printer("lakpa")
+
+## example 3
+
+
+def outer(func):
+    def inner(*args):
+        print("High")
+        func(*args)
+        print("Low")
+
+    return inner
+
+
+@outer
+def show(arg):
+    print(arg)
+
+
+# show("Mid" * 9)
+
+# Advanced example
+
+
+def details(func):
+    def personal_info(*args):
+        my_dict = {"Name": "Lakpa", "Age": 26, "Country": ["Nepal", "Korea"]}
+        func(*args)
+        for countries in my_dict["Country"]:
+            print(f"Lakpa lived in {countries}")
+
+    return personal_info
+
+
+@details
+def get_info(arg):
+    print(arg)
+
+
+get_info("Male")
